@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MonoSense｜個人開発のアプリと、Claude Code の開発ログ</title>
+  <meta name="description" content="MonoSense（モノセンス）は、個人でアプリやゲームを作って発信しています。TRPGシナリオ工房・Re-dice・ITでGO!・トレ飯ログの紹介と、Claude Code への指示を検証する開発ログ（note）、X へのリンクをまとめています。">
+  <meta name="theme-color" content="#f8f4e9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1f1813" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://m0nosense.github.io/">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MonoSense">
+  <meta property="og:title" content="MonoSense｜個人開発のアプリと、Claude Code の開発ログ">
+  <meta property="og:description" content="作ったアプリと、AI への指示をぜんぶ公開。アプリの紹介と、note の連載・X へのリンクをまとめています。">
+  <meta property="og:url" content="https://m0nosense.github.io/">
+  <meta property="og:image" content="https://m0nosense.github.io/og.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@M0noSense">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="MonoSense トップ">
+        <img src="images/monokun.png" alt="" width="36" height="36">
+        <span>MonoSense</span>
+      </a>
+      <nav class="nav" aria-label="ページ内のリンク">
+        <a href="#apps">アプリ</a>
+        <a href="#devlog">連載</a>
+        <a href="#follow">X</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- はじめの画面 -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">ひとりで作る、アプリとゲーム</p>
+          <h1>作ったアプリと、<br>その作り方を、<br>ぜんぶ見せます。</h1>
+          <p class="lead">MonoSense（モノセンス）は、個人でアプリやゲームを作って発信するときの名前です。開発には AI の Claude Code を使い、送った指示とそのムダまで、note の連載で公開しています。</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://note.com/light_crab8634/n/n448123a1a8f1" target="_blank" rel="noopener">連載 #0 を無料で読む</a>
+            <a class="btn btn-ghost" href="https://x.com/M0noSense" target="_blank" rel="noopener">
+              <svg class="x-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              @M0noSense をフォロー
+            </a>
+          </div>
+        </div>
+        <div class="hero-mascot" aria-hidden="true">
+          <p class="bubble">アプリ、<br>つくってます！</p>
+          <img src="images/monokun.png" alt="" width="220" height="220">
+        </div>
+      </div>
+    </section>
+
+    <!-- アプリ -->
+    <section id="apps" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">APPS</p>
+          <h2>つくっているもの</h2>
+          <p>TRPG・学習・健康のアプリを作っています。ストアに出たら、ここと X でお知らせします。</p>
+        </div>
+
+        <div class="app-grid">
+          <!--
+            アプリを足すときは、下の <article class="app-card"> … </article> を 1 つ複製して書き換える。
+            状態の札：公開中は status-live、公開準備中は status-soon、開発中は status-dev。
+            アイコンは images/apps/ に 256×256 の PNG で置く。
+          -->
+          <article class="app-card">
+            <div class="app-head">
+              <img class="app-icon" src="images/apps/trpg-scenario-workshop.png" alt="TRPGシナリオ工房のアイコン" width="72" height="72" loading="lazy">
+              <div>
+                <h3>TRPGシナリオ工房</h3>
+                <p class="tags"><span class="status status-soon">ストア公開準備中</span><span class="platform">iPhone・iPad</span></p>
+              </div>
+            </div>
+            <p class="app-lead">TRPG のシナリオを、章・シーン・分岐で書けるアプリ。</p>
+            <ul class="points">
+              <li>判定の成功・失敗で分かれる流れを、フローチャートで見渡せる</li>
+              <li>表紙・目次・立ち絵入りの頒布用 PDF を自動で作れる</li>
+              <li>小説投稿サイトや SNS に貼れる投稿文も自動で作れる</li>
+            </ul>
+            <p class="links">
+              <a class="link-arrow" href="https://koppepandaisuki.github.io/" target="_blank" rel="noopener">紹介ページ</a>
+              <a class="link-arrow" href="https://note.com/light_crab8634/m/m6a612832289d" target="_blank" rel="noopener">note の開発ログ</a>
+            </p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-head">
+              <img class="app-icon" src="images/apps/re-dice.png" alt="Re-dice のアイコン" width="72" height="72" loading="lazy">
+              <div>
+                <h3>Re-dice<small>（リダイス）</small></h3>
+                <p class="tags"><span class="status status-live">公開中</span><span class="platform">ブラウザ・Windows</span></p>
+              </div>
+            </div>
+            <p class="app-lead">卓を立てて、すぐ遊ぶ。ブラウザで遊べる TRPG のオンラインセッションツール。</p>
+            <ul class="points">
+              <li>参加者はログインもインストールも不要。届いたリンクを開くだけ</li>
+              <li>BCDice 対応のダイス・盤面・キャラシ・BGM が 1 つに</li>
+              <li>TRPGシナリオ工房で書いたシナリオから、卓を作れる</li>
+            </ul>
+            <p class="links">
+              <a class="link-arrow" href="https://re-dice.net/" target="_blank" rel="noopener">re-dice.net で遊ぶ</a>
+            </p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-head">
+              <img class="app-icon" src="images/apps/it-de-go.png" alt="ITでGO! のアイコン" width="72" height="72" loading="lazy">
+              <div>
+                <h3>ITでGO!</h3>
+                <p class="tags"><span class="status status-dev">開発中</span><span class="platform">iPhone</span></p>
+              </div>
+            </div>
+            <p class="app-lead">IT 資格の公開問題で敵を倒しながら進む、島めぐりバトル式の学習ゲーム。</p>
+            <ul class="points">
+              <li>ITパスポート・情報セキュリティマネジメント・基本情報・応用情報の 4 資格</li>
+              <li>正解した瞬間に一撃で撃破。毎問、解説つき</li>
+              <li>連続学習日数やモンスター図鑑で、続けたくなる</li>
+            </ul>
+            <p class="links">
+              <a class="link-arrow" href="https://note.com/light_crab8634/n/n9fdccadf18cc" target="_blank" rel="noopener">note の開発ログ</a>
+            </p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-head">
+              <img class="app-icon" src="images/apps/toremeshi-log.png" alt="トレ飯ログのアイコン" width="72" height="72" loading="lazy">
+              <div>
+                <h3>トレ飯ログ</h3>
+                <p class="tags"><span class="status status-soon">ストア公開準備中</span><span class="platform">iPhone・Android</span></p>
+              </div>
+            </div>
+            <p class="app-lead">筋トレと食事を、1 つのアプリで記録して振り返る。</p>
+            <ul class="points">
+              <li>カメラの映像から、スクワットや腕立て伏せの回数を自動で数える</li>
+              <li>前回の重量・回数が最初から入るので、記録がすぐ終わる</li>
+              <li>PFC バランスと 23 の栄養素を、1 日の目安と比べて見られる</li>
+            </ul>
+            <p class="links">
+              <a class="link-arrow" href="https://toremeshi-log.github.io/" target="_blank" rel="noopener">紹介ページ</a>
+            </p>
+          </article>
+
+          <article class="app-card app-card-next">
+            <img src="images/monokun.png" alt="" width="64" height="64" loading="lazy">
+            <h3>次のアプリも、つくっています</h3>
+            <p>新しいアプリは、X と note で先にお知らせします。</p>
+            <p class="links"><a class="link-arrow" href="https://x.com/M0noSense" target="_blank" rel="noopener">X でお知らせを受け取る</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 連載 -->
+    <section id="devlog" class="section section-tint">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">DEV LOG</p>
+          <h2>Claude Code への指示を、<br class="sp">ぜんぶ検証する開発ログ</h2>
+          <p>アプリを作るときに AI（Claude Code）へ送った指示を、原文のまま note で公開しています。毎回、実際の作業の記録からトークン（AI の使用量）を数えて、どこでムダになったかと、往復なしで通る「改善した指示」まで書いています。</p>
+        </div>
+
+        <ol class="contents">
+          <li><span>1</span>送った指示（原文のまま）</li>
+          <li><span>2</span>AI からの確認と、その答え</li>
+          <li><span>3</span>使ったトークンと、ムダになった原因</li>
+          <li><span>4</span>そのまま使える「改善した指示」</li>
+        </ol>
+        <p class="note-small">前半（何が起きたか・指示の原文）は無料、後半（検証と改善）は有料です。</p>
+
+        <a class="feature" href="https://note.com/light_crab8634/n/n448123a1a8f1" target="_blank" rel="noopener">
+          <img src="images/note/00_intro.jpg" alt="" width="1280" height="670" loading="lazy">
+          <div class="feature-body">
+            <p class="tags"><span class="price price-free">無料</span><span class="series">#0 連載のはじめに</span></p>
+            <h3>同じ「コミットして」で、<br>トークン約10倍</h3>
+            <p>まったく同じ一言が、1 回目は約18万トークン、2 回目は約188万トークン。この連載で何を公開するのかを紹介する、入口の記事です。</p>
+            <span class="link-arrow">無料で読む</span>
+          </div>
+        </a>
+
+        <!--
+          記事を足すときは、下の <li> を 1 つ複製して、URL・アプリ名・番号・タイトルを書き換える。
+          新しい記事ほど上に置く。値段は書かず、「無料」か「有料」の札だけにする。
+        -->
+        <ul class="articles">
+          <li>
+            <a href="https://note.com/light_crab8634/n/n1b460b738d13" target="_blank" rel="noopener">
+              <span class="series">ITでGO!</span>
+              <span class="title">「マージして。」の 5 文字で、約143万トークン</span>
+              <span class="meta"><span class="price price-paid">有料</span><time datetime="2026-10-17">2026.10.17</time></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://note.com/light_crab8634/n/n9fdccadf18cc" target="_blank" rel="noopener">
+              <span class="series">ITでGO!</span>
+              <span class="title">「オマージュ」の一言で、2 回作り直しになった話</span>
+              <span class="meta"><span class="price price-paid">有料</span><time datetime="2026-10-17">2026.10.17</time></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://note.com/light_crab8634/n/n02293d925367" target="_blank" rel="noopener">
+              <span class="series">TRPGシナリオ工房 #2</span>
+              <span class="title">新しい会話で頼めば、トークン約6割減</span>
+              <span class="meta"><span class="price price-paid">有料</span><time datetime="2026-10-17">2026.10.17</time></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://note.com/light_crab8634/n/n1d2bb0940fd7" target="_blank" rel="noopener">
+              <span class="series">TRPGシナリオ工房 #1</span>
+              <span class="title">ストア公開準備で、約100万トークンをムダにした話</span>
+              <span class="meta"><span class="price price-paid">有料</span><time datetime="2026-10-17">2026.10.17</time></span>
+            </a>
+          </li>
+        </ul>
+
+        <a class="magazine" href="https://note.com/light_crab8634/m/m6a612832289d" target="_blank" rel="noopener">
+          <p class="eyebrow">マガジン（買い切り）</p>
+          <h3>Claude Codeでアプリをストアに出すまでの全指示ログ</h3>
+          <p>TRPGシナリオ工房の有料記事をまとめて読めます。アプリの完成までに増える記事も、追加料金なしで読めます。記事が増えるたびに値上げする予定です。</p>
+          <span class="link-arrow">マガジンを見る</span>
+        </a>
+
+        <p class="more"><a class="link-arrow" href="https://note.com/light_crab8634" target="_blank" rel="noopener">note で、すべての記事を見る</a></p>
+      </div>
+    </section>
+
+    <!-- X と note -->
+    <section id="follow" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">FOLLOW</p>
+          <h2>新しいお知らせは、X で</h2>
+          <p>アプリの公開や、新しい記事が出たときにお知らせします。</p>
+        </div>
+        <div class="follow-grid">
+          <a class="follow-card follow-x" href="https://x.com/M0noSense" target="_blank" rel="noopener">
+            <svg class="x-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span class="follow-name">@M0noSense</span>
+            <span class="follow-desc">アプリの公開と、新しい記事のお知らせ</span>
+            <span class="btn btn-primary">X でフォローする</span>
+          </a>
+          <a class="follow-card" href="https://note.com/light_crab8634" target="_blank" rel="noopener">
+            <span class="note-mark" aria-hidden="true">note</span>
+            <span class="follow-name">MonoSense編集部</span>
+            <span class="follow-desc">Claude Code への指示を検証する開発ログ</span>
+            <span class="btn btn-ghost">note をフォローする</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="./">
+        <img src="images/monokun.png" alt="" width="28" height="28">
+        <span>MonoSense</span>
+      </a>
+      <nav class="footer-nav" aria-label="フッターのリンク">
+        <a href="#apps">アプリ</a>
+        <a href="#devlog">連載</a>
+        <a href="https://x.com/M0noSense" target="_blank" rel="noopener">X</a>
+        <a href="https://note.com/light_crab8634" target="_blank" rel="noopener">note</a>
+      </nav>
+      <p class="footer-note">各アプリの利用規約・プライバシーポリシーは、それぞれの紹介ページにあります。</p>
+      <p class="copyright">© 2026 MonoSense</p>
+    </div>
+  </footer>
+</body>
+</html>
